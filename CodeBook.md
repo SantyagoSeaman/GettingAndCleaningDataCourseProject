@@ -37,7 +37,7 @@ Also there are two common references located in the root directory of data archi
 
 ## Preparatory steps
 
-Before launch the script `run_alaysis.R` you have to unpack archive with data to directory `./data/`
+Before launch the script `run_alaysis.R` you have to unpack archive with data to root directory of project
 
 ## Tranformation steps
 
