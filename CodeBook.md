@@ -51,6 +51,18 @@ Before launch the script `run_alaysis.R` you have to unpack archive with data to
 7. Create dataset with the average of each variable for each activity and each subject
 8. Write mean_tidy_data_set.txt
 
+## Variables
+
+- `feature_names` - Feature names list after transformation
+- `activity_labels` - Activity lables reference
+- `merged_test_data` - TEST data merged to single dataset
+- `merged_train_data` - TRAIN data merged to single dataset
+- `all_data` - Test and train dataset merget to single dataset
+- `mean_col_names` - Column names with mean measurements
+- `std_col_names` - Column names with standard deviation measurements
+- `tidy_data` - Slices dataset with only required columns with mean and standard deviation measurements
+- `mean_data` - Dataset with the average of each variable for each activity and each subject
+
 ## Resulting tidy dataset format
 
 ### Final dataset consists of 68 columns:

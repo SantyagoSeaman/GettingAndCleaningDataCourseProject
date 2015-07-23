@@ -2,7 +2,7 @@ library("dplyr")
 library("stats")
 
 # Load references
-features <- read.table("./data/features.txt", stringsAsFactors = F)
+features <- read.table("./features.txt", stringsAsFactors = F)
 feature_names <- features[,2]
 
 # Rename features to more understandable view
@@ -18,18 +18,18 @@ feature_names <- gsub("Gyro", "Gyroscope", feature_names)
 feature_names <- gsub("Mag", "Magnitude", feature_names)
 feature_names <- gsub("BodyBody", "Body", feature_names)
 
-activity_labels <- read.table("./data/activity_labels.txt", col.names=c("activity_id", "activity_name"))
+activity_labels <- read.table("./activity_labels.txt", col.names=c("activity_id", "activity_name"))
 
 # Load and merge TEST data
-test_data <- read.table("./data/test/X_test.txt", col.names = feature_names)
-test_subject_id <- read.table("./data/test/subject_test.txt", col.names = c("subject"))
-test_activity_id <- read.table("./data/test/y_test.txt", col.names = c("activity"))
+test_data <- read.table("./test/X_test.txt", col.names = feature_names)
+test_subject_id <- read.table("./test/subject_test.txt", col.names = c("subject"))
+test_activity_id <- read.table("./test/y_test.txt", col.names = c("activity"))
 merged_test_data <- cbind(test_subject_id , test_activity_id , test_data)
 
 # Load and merge TRAIN data
-train_data <- read.table("./data/train/X_train.txt", col.names = feature_names)
-train_subject_id <- read.table("./data/train/subject_train.txt", col.names = c("subject"))
-train_activity_id <- read.table("./data/train/y_train.txt", col.names = c("activity"))
+train_data <- read.table("./train/X_train.txt", col.names = feature_names)
+train_subject_id <- read.table("./train/subject_train.txt", col.names = c("subject"))
+train_activity_id <- read.table("./train/y_train.txt", col.names = c("activity"))
 merged_train_data <- cbind(train_subject_id , train_activity_id , train_data)
 
 # Merge two datasets
